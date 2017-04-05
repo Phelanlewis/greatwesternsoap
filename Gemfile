@@ -24,6 +24,10 @@ gem 'solidus'
 
 gem 'solidus_auth_devise'
 
+gem 'bootstrap-sass'
+
+gem 'autoprefixer-rails', '~> 6.7', '>= 6.7.7'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
