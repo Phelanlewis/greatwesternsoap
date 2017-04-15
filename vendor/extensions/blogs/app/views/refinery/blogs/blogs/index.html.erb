@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="blogs">
+    <% @blogs.each do |blog| %>
+      <li>
+        <%= link_to blog.title, refinery.blogs_blog_path(blog) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>
