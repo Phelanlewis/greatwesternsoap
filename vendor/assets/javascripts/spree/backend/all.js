@@ -7,5 +7,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require spree/backend
+<<<<<<< HEAD
 
+=======
+>>>>>>> e6572a931f7cd61a3be0f62283f389c190d4e9c9
 //= require_tree .

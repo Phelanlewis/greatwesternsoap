@@ -5,6 +5,7 @@ Spree.config do |config|
   # Without this preferences are loaded and persisted to the database. This
   # changes them to be stored in memory.
   # This will be the default in a future version.
+  # This line resets all preferences! It should be the first line in the block
   config.use_static_preferences!
 
   # Core:
@@ -69,4 +70,7 @@ Spree::Api::Config.configure do |config|
   config.requires_authentication = true
 end
 
+
 Spree.user_class = "Spree::User"
+# This is what solidus needed without refinerycms
+# Spree.user_class = "Spree::LegacyUser"
