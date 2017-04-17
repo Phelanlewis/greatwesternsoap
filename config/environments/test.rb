@@ -12,10 +12,17 @@ Rails.application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = false
 
-
+<<<<<<< HEAD
   # Configure static file server for tests with Cache-Control for performance.
   config.serve_static_files   = true
   config.static_cache_control = 'public, max-age=3600'
+=======
+  # Configure public file server for tests with Cache-Control for performance.
+  config.public_file_server.enabled = true
+  config.public_file_server.headers = {
+    'Cache-Control' => 'public, max-age=3600'
+  }
+>>>>>>> e6572a931f7cd61a3be0f62283f389c190d4e9c9
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
@@ -26,15 +33,15 @@ Rails.application.configure do
 
   # Disable request forgery protection in test environment.
   config.action_controller.allow_forgery_protection = false
-
-# ======= SOLIDUS ONLY METHOD =======
-#   config.action_mailer.perform_caching = false
-
+<<<<<<< HEAD
+=======
+  config.action_mailer.perform_caching = false
+>>>>>>> e6572a931f7cd61a3be0f62283f389c190d4e9c9
 
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
-
+<<<<<<< HEAD
   if config.respond_to?(:action_mailer)
   if config.respond_to?(:action_mailer)
       config.action_mailer.delivery_method = :test
@@ -43,9 +50,9 @@ Rails.application.configure do
 
   # Randomize the order test cases are executed.
   config.active_support.test_order = :random
-# ======= SOLIDUS ONLY METHOD ======
-  # config.action_mailer.delivery_method = :test
-
+=======
+  config.action_mailer.delivery_method = :test
+>>>>>>> e6572a931f7cd61a3be0f62283f389c190d4e9c9
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
