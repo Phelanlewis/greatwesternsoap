@@ -44,7 +44,7 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
 # ======= solidus only method =======
-  # config.assets.compile = false
+  # config.assets.compile = true
   #
   # # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
   #
@@ -91,13 +91,15 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   if config.respond_to?(:action_mailer)
   if config.respond_to?(:action_mailer)
-      # config.action_mailer.raise_delivery_errors = false
-  end
-  end
+  if config.respond_to?(:action_mailer)
+        # config.action_mailer.raise_delivery_errors = false
+    end
+    end
 =======
-  # Use a real queuing backend for Active Job (and separate queues per environment)
-  # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "solidus_soap_#{Rails.env}"
+    # Use a real queuing backend for Active Job (and separate queues per environment)
+    # config.active_job.queue_adapter     = :resque
+    # config.active_job.queue_name_prefix = "solidus_soap_#{Rails.env}
+  end"
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.

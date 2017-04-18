@@ -33,6 +33,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'bootstrap-sass', '3.2.0.2'
+gem 'refinerycms-bootstrap', :github => 'fernandoaleman/refinerycms-bootstrap', :branch => '2-1-stable'
 gem 'refinerycms', '~> 3.0.0'
 
 # Add support for searching inside Refinery's admin interface.
@@ -44,8 +46,6 @@ gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 gem 'solidus', '~> 1.2.2'
 gem 'solidus_auth_devise'
 gem 'solidus-refinerycms-authentication', github: 'refinerycms-contrib/solidus-refinery-authentication', branch: 'master'
-
-gem 'bootstrap-sass'
 
 gem 'autoprefixer-rails', '~> 6.7', '>= 6.7.7'
 

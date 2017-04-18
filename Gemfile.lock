@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/fernandoaleman/refinerycms-bootstrap.git
+  revision: b90e39e106abeb77dca7ae4586229b29fe5c68b4
+  branch: 2-1-stable
+  specs:
+    refinerycms-bootstrap (0.0.1)
+      bootstrap-sass-rails
+
+GIT
   remote: git://github.com/refinerycms-contrib/solidus-refinery-authentication.git
   revision: 954141516b82ef592d2fdcfe9833dacf05590145
   branch: master
@@ -74,9 +82,11 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.3.7)
-      autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
+    bootstrap-sass (3.2.0.2)
+      sass (~> 3.2)
+    bootstrap-sass-rails (3.0.3.0)
+      railties (>= 3.1.0)
+      sass-rails (>= 3.1.0)
     bourbon (4.3.4)
       sass (~> 3.4)
       thor (~> 0.19)
@@ -133,8 +143,8 @@ GEM
       sass (>= 3.2)
     friendly_id (5.2.1)
       activerecord (>= 4.0.0)
-    globalid (0.3.7)
-      activesupport (>= 4.1.0)
+    globalid (0.4.0)
+      activesupport (>= 4.2.0)
     globalize (5.0.1)
       activemodel (>= 4.2.0, < 4.3)
       activerecord (>= 4.2.0, < 4.3)
@@ -413,7 +423,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails (~> 6.7, >= 6.7.7)
-  bootstrap-sass
+  bootstrap-sass (= 3.2.0.2)
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
@@ -425,6 +435,7 @@ DEPENDENCIES
   refinerycms (~> 3.0.0)
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.0)
   refinerycms-blogs!
+  refinerycms-bootstrap!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
