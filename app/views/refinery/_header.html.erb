@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <h2 class="navbar-brand"><%=Refinery::Core::site_name %></h2>
+        </div>
+        <div class="navbar">
+          <%= navigation_menu.to_html %>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul>
+            <li>
+              <% menu = BootstrapMenu.new(refinery_menu_pages, self) %>
+              <% menu.max_depth = 1 %>
+              <%= menu.to_html %>
+            </li>
+          </ul>
+        </div> -->
+    </div>
+</nav>
