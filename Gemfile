@@ -34,9 +34,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap-sass', '3.2.0.2'
-gem 'refinerycms-bootstrap', :github => 'fernandoaleman/refinerycms-bootstrap', :branch => '2-1-stable'
+
 gem 'refinerycms', '~> 3.0.0'
 
+gem 'refinerycms-bootstrap', :github => 'fernandoaleman/refinerycms-bootstrap', :branch => '2-1-stable'
 # Add support for searching inside Refinery's admin interface.
 gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
 
