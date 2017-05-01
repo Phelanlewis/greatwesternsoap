@@ -7,6 +7,16 @@ GIT
       bootstrap-sass-rails
 
 GIT
+  remote: git://github.com/refinery/refinerycms-page-images.git
+  revision: 5f50b6d37bd31ddc74ae2d574ab2abfe17b9e650
+  branch: master
+  specs:
+    refinerycms-page-images (3.0.0)
+      decorators (~> 2.0.0)
+      globalize (~> 5.0)
+      refinerycms-pages (~> 3.0.0)
+
+GIT
   remote: git://github.com/refinerycms-contrib/solidus-refinery-authentication.git
   revision: 954141516b82ef592d2fdcfe9833dacf05590145
   branch: master
@@ -18,12 +28,21 @@ GIT
       solidus (~> 1.0)
       zilch-authorisation (>= 0.0.1)
 
-PATH
-  remote: vendor/extensions
+GIT
+  remote: https://github.com/refinery/refinerycms-blog
+  revision: fcb0ed25271ff3cd173e12a751dc3fc2a903d03f
+  branch: master
   specs:
-    refinerycms-blogs (1.0)
-      acts_as_indexed (~> 0.8.0)
-      refinerycms-core (~> 3.0.5)
+    refinerycms-blog (3.0.1)
+      acts-as-taggable-on
+      filters_spam (~> 0.2)
+      friendly_id (~> 5.1.0)
+      globalize (>= 4.0.0, < 5.2)
+      jquery-ui-rails (~> 5.0.0)
+      rails_autolink (~> 1.1.3)
+      refinerycms-core (~> 3.0.0)
+      refinerycms-settings (~> 3.0.0)
+      seo_meta (~> 2.0.0.rc.1)
 
 GEM
   remote: https://rubygems.org/
@@ -68,6 +87,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (4.0.0)
+      activerecord (>= 4.0)
     acts_as_indexed (0.8.3)
     acts_as_list (0.9.5)
       activerecord (>= 3.0)
@@ -121,13 +142,14 @@ GEM
       nokogiri (~> 1.6.0)
       polyglot
       rails (>= 3.1)
-    devise (4.2.1)
+    devise (3.5.10)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 5.1)
+      railties (>= 3.2.6, < 5)
       responders
+      thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    devise-encryptable (0.2.0)
+    devise-encryptable (0.1.2)
       devise (>= 2.1.0)
     diffy (3.1.0)
     dragonfly (1.0.12)
@@ -137,11 +159,12 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffaker (1.32.1)
-    font-awesome-rails (4.7.0.1)
-      railties (>= 3.2, < 5.1)
+    filters_spam (0.5)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
-    friendly_id (5.2.1)
+    friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -235,6 +258,8 @@ GEM
     rails-i18n (4.0.9)
       i18n (~> 0.7)
       railties (~> 4.0)
+    rails_autolink (1.1.6)
+      rails (> 3.1)
     railties (4.2.6)
       actionpack (= 4.2.6)
       activesupport (= 4.2.6)
@@ -257,6 +282,11 @@ GEM
       acts_as_indexed (~> 0.8.0)
       decorators (~> 2.0.0)
       refinerycms-core (~> 3.0.0)
+    refinerycms-authentication-devise (1.0.4)
+      actionmailer (~> 4.2, >= 4.2.0)
+      devise (~> 3.0, >= 3.2.4)
+      friendly_id (~> 5.1.0)
+      refinerycms-core (~> 3.0, >= 3.0.0)
     refinerycms-core (3.0.5)
       actionpack (>= 4.2.3, < 5.0)
       activerecord (>= 4.2.3, < 5.0)
@@ -293,6 +323,9 @@ GEM
       dragonfly (~> 1.0.0)
       globalize (>= 4.0.0, < 5.2)
       refinerycms-core (= 3.0.5)
+    refinerycms-settings (3.0.0)
+      friendly_id (~> 5.0, >= 5.0.1)
+      refinerycms-core (~> 3.0, >= 3.0.0)
     refinerycms-wymeditor (1.1.0)
       refinerycms-core (>= 3.0.0, < 5.0)
     responders (2.4.0)
@@ -325,13 +358,13 @@ GEM
       rabl (>= 0.9.4.pre1, < 0.12.0)
       solidus_core (= 1.2.2)
       versioncake (~> 2.3.1)
-    solidus_auth_devise (1.6.2)
+    solidus_auth_devise (1.4.0)
       deface (~> 1.0.0)
-      devise (~> 4.1)
-      devise-encryptable (= 0.2.0)
+      devise (~> 3.5.1)
+      devise-encryptable (= 0.1.2)
       json
       multi_json
-      solidus_core (>= 1.0.6, < 3)
+      solidus_core (>= 1.0.6, < 2)
     solidus_backend (1.2.2)
       bourbon (>= 4, < 6)
       handlebars_assets (~> 0.23)
@@ -433,8 +466,10 @@ DEPENDENCIES
   rails (= 4.2.6)
   refinerycms (~> 3.0.0)
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.0)
-  refinerycms-blogs!
+  refinerycms-authentication-devise (~> 1.0.2)
+  refinerycms-blog!
   refinerycms-bootstrap!
+  refinerycms-page-images (~> 3.0.0)!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

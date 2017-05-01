@@ -43,7 +43,9 @@ gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
 
 # Add support for Refinery's custom fork of the visual editor WYMeditor.
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
+gem 'refinerycms-authentication-devise', '~> 1.0.2'
 
+gem 'refinerycms-page-images', '~> 3.0.0', github: "refinery/refinerycms-page-images", branch: "master"
 gem 'solidus', '~> 1.2.2'
 gem 'solidus_auth_devise'
 gem 'solidus-refinerycms-authentication', github: 'refinerycms-contrib/solidus-refinery-authentication', branch: 'master'
@@ -64,5 +66,4 @@ group :development do
   # gem 'spring'
   # gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
-gem 'refinerycms-blogs', path: 'vendor/extensions'
+gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
